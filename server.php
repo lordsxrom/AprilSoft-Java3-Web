@@ -46,3 +46,17 @@ if (isset($_POST['chat_user']) & isset($_POST['chat_message'])) {
         mysqli_query($conn, $sql);
     }
 }
+
+if (isset($_POST['login_user']) & isset($_POST['login_password'])) {
+    $user = $_POST['login_user'];
+    $password = $_POST['login_password'];
+    if ($user != "" & $password != "") {
+        $sql = "SELECT * from `users` WHERE `name`='$user' AND `password`='$password' LIMIT 1";
+        $result = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            echo 'login';
+        } else {
+            echo 'fail';
+        }
+    }
+}

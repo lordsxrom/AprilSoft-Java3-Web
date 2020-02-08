@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link href="login_style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="login_scripts.js"></script>
+</head>
+
+<body>
+
+    <div class="modal">
+
+        <form class="modal-content animate" id="frmLogin">
+            <div class="imgcontainer">
+                <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" id="login-user" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="login-password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" id="btn-login">Login</button>
+
+                <input type="checkbox" checked="checked" name="remember">
+                <label>Remember me</label>
+            </div>
+
+            <!-- <div class="container" style="background-color:#f1f1f1">
+                <label for="signupbtn"><b>Do you still have no account?</b></label>
+                <button name="signupbtn" onclick="" id="btn-signup">Sign Up</button>
+            </div> -->
+        </form>
+    </div>
+
+</body>
+
+</html>

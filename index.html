@@ -11,12 +11,22 @@
 </head>
 
 <body>
-    <form name="frmChat" id="frmChat">
-        <input type="text" id="input-user" placeholder="Name" class="input-text" required />
-        <input type="text" id="input-message" placeholder="Message" class="input-text" required />
-        <input type="submit" id="btnSend" value="Send">
+    <div class="container">
+        <form name="frmChat" id="frmChat">
+            <input type="text" id="input-message" placeholder="Message" required />
+            <input type="submit" id="btnSend" value="Send">
+        </form>
+    </div>
+
+    <div class="container">
         <div id="chat-box"></div>
-    </form>
+    </div>
+
+    <div class="container">
+        <label for="logout"><b>Do you want to leave the chat?</b></label>
+        <input type="button" id="btnLogout" name="logout" value="Logout">
+    </div>
+
 </body>
 
 </html>

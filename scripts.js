@@ -1,4 +1,5 @@
 var lastId = 1;
+var chat_user;
 
 function update() {
     $.get("https://aprilsoftchat.000webhostapp.com/server.php", { lastId: lastId },
@@ -18,25 +19,40 @@ function update() {
             }
         });
 
-    setTimeout('update()', 5000);
+    // setTimeout('update()', 5000);
+}
+
+function login() {
+    chat_user = window.localStorage.getItem('user');
+    console.log("user name: " + chat_user);
+
+    if (chat_user == null || chat_user == "") {
+        console.log('location to login page');
+        window.location = "login/login.html";
+    }
 }
 
 $(document).ready(
     function() {
+        login();
         update();
 
         $('#frmChat').on("submit", function(event) {
             event.preventDefault();
-            //$('#input-user').attr("type", "hidden");
 
             $.post("https://aprilsoftchat.000webhostapp.com/server.php", {
-                chat_user: $('#input-user').val(),
+                chat_user: chat_user,
                 chat_message: $('#input-message').val()
             }, function(data, status) {
                 console.log("Send status: " + status);
                 $('#input-message').val("");
             });
         });
+
+        $('#btnLogout').click(function() {
+            window.localStorage.setItem('user', '');
+            login();
+        })
 
     }
 );
