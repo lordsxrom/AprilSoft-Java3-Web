@@ -1,30 +1,37 @@
 <!DOCTYPE HTML>
+
 <html>
 
 <head>
     <meta charset="UTF-8">
     <title>April Soft Chat</title>
+    <link rel="icon" href="img/icon.png" type="image/png" />
 
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="scripts.js"></script>
+    <script src="scripts.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <div class="container">
-        <form name="frmChat" id="frmChat">
-            <input type="text" id="input-message" placeholder="Message" required />
-            <input type="submit" id="btnSend" value="Send">
-        </form>
-    </div>
 
-    <div class="container">
-        <div id="chat-box"></div>
-    </div>
+    <div id="chat-content">
 
-    <div class="container">
-        <label for="logout"><b>Do you want to leave the chat?</b></label>
-        <input type="button" id="btnLogout" name="logout" value="Logout">
+        <div class="container">
+            <form name="frmChat" id="frmChat">
+                <input type="text" id="input-message" placeholder="Message" required />
+                <input type="submit" id="btnSend" value="Send">
+            </form>
+        </div>
+
+        <div class="container">
+            <div id="chat-box"></div>
+        </div>
+
+        <div class="container">
+            <label for="logout"><b>Do you want to leave the chat?</b></label>
+            <input type="button" id="btnLogout" name="logout" value="Logout">
+        </div>
+
     </div>
 
 </body>

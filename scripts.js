@@ -52,7 +52,7 @@ $(document).ready(
         $('#btnLogout').click(function() {
             window.localStorage.setItem('user', '');
             login();
-        })
+        });
 
     }
 );

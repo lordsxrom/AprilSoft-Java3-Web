@@ -1,5 +1,16 @@
+// var avatarUrl;
+
 $(document).ready(
     function() {
+
+        // $('#avatar').click(function() {
+        //     var url = prompt("Please enter your avatar url");
+        //     if (url != null & url != "") {
+        //         $("#avatar").attr("src", url);
+        //         avatarUrl = url;
+        //     }
+        // });
+
         $('#frmLogin').on("submit", function(event) {
             event.preventDefault();
 
