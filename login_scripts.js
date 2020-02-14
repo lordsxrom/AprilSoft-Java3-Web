@@ -23,7 +23,7 @@ $(document).ready(
                 if (data == "login") {
                     window.localStorage.setItem("user", $('#login-user').val());
                     console.log('location to index');
-                    window.location = "../index.html";
+                    window.location = "index.html";
                 } else {
                     window.alert('Wrong login or password');
                 }

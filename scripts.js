@@ -28,8 +28,10 @@ function login() {
 
     if (chat_user == null || chat_user == "") {
         console.log('location to login page');
-        window.location = "login/login.html";
+        window.location = "login.html";
     }
+
+    $('#chat-content').css("display", "block");
 }
 
 $(document).ready(
