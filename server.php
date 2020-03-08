@@ -40,7 +40,6 @@ if (isset($_GET['lastId'])) {
 if (isset($_POST['chat_user']) & isset($_POST['chat_message'])) {
     $user = $_POST['chat_user'];
     $text = $_POST['chat_message'];
-    $time = time();
     if ($text != "" & $user != "") {
         $sql = "INSERT INTO `chat` (`id`, `time`, `user`, `text`) VALUES (null,null,'$user','$text')";
         mysqli_query($conn, $sql);
